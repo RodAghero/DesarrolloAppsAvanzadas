@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Menus.mConfigurarCuenta">
+
+    <include android:id="@+id/action_bar"
+        layout="@layout/actionbar"
+        >
+    </include>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/texto_configurar_cuenta"
+        android:textSize="@dimen/texto_letrero_configurar_cuenta"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/distancia_superior_texto"
+        />
+
+    <RadioGroup
+        android:id="@+id/grupoRadios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distancia_views_m_configurar_cuenta"
+        >
+
+        <RadioButton
+            android:id="@+id/opcion01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_radio_buttons"
+            android:checked="true"
+            android:onClick="radioClicked"
+            android:layout_gravity="center"
+            />
+
+        <RadioButton
+            android:id="@+id/opcion02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_radio_buttons"
+            android:onClick="radioClicked"
+            android:layout_gravity="center"
+            />
+
+        <RadioButton
+            android:id="@+id/opcion03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_radio_buttons"
+            android:onClick="radioClicked"
+            android:layout_gravity="center"
+            />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tvcuentaSeleccionada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/visualizacion_cuenta_seleccionada"
+            android:textSize="@dimen/texto_visualizacion_cuenta_seleccionada"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="@dimen/distancia_views_m_configurar_cuenta"
+            />
+
+        <Button
+            android:id="@+id/botonGuardarCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_guardar_cuenta"
+            android:textSize="@dimen/texto_botones"
+            android:layout_marginTop="@dimen/distancia_views_m_configurar_cuenta"
+
+            />
+
+    </LinearLayout>
+
+    <!--
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/inputConfigurarCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/texto_escribir_usuario"
+            android:paddingTop="@dimen/distancia_superior_input_configurar_cuenta"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/botonGuardarCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_guardar_cuenta"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/distancia_superior_boton"
+        android:textSize="@dimen/texto_botones"
+        android:layout_gravity="center"
+        android:onClick="guardarCuenta"
+        />
+-->
+</LinearLayout>

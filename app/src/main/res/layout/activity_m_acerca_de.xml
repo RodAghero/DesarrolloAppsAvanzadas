@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menus.mAcercaDe">
+
+    <include android:id="@+id/action_bar"
+        layout="@layout/actionbar"
+        >
+    </include>
+
+    <TextView
+        android:id="@+id/menuAcercaDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/texto_acerca_de"
+        android:textSize="@dimen/texto_acerca_de"
+        android:paddingTop="@dimen/distancia_superior_texto"
+        android:paddingLeft="@dimen/distancia_left"
+        />
+
+</RelativeLayout>

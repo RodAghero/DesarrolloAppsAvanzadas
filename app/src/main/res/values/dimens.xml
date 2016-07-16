@@ -1,0 +1,48 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- para el actionBar-->
+    <dimen name="elevacion_appbar">4dp</dimen>
+    <dimen name="texto_appbar">30dp</dimen>
+
+    <!--para el cardview-->
+    <dimen name="corner_radius_cardview">4dp</dimen>
+    <dimen name="nombre_cardview">20dp</dimen>
+    <dimen name="padding_linear_layout">10dp</dimen>
+    <dimen name="texto_cardview">20dp</dimen>
+    <dimen name="padding_nombre_cardview">25dp</dimen>
+    <dimen name="padding_numero__left_cardview">15dp</dimen>
+    <dimen name="padding_numero_right_cardview">5dp</dimen>
+    <dimen name="image_card_size">200dp</dimen>
+    <dimen name="imagen_button_size">45dp</dimen>
+
+    <!-- para los menus-->
+    <dimen name="texto_acerca_de">30dp</dimen>
+    <dimen name="distancia_superior_texto">100dp</dimen>
+    <dimen name="distancia_left">50dp</dimen>
+    <dimen name="distancia_superior_boton">120dp</dimen>
+    <dimen name="texto_botones">20dp</dimen>
+    <dimen name="texto_letrero_configurar_cuenta">40dp</dimen>
+    <dimen name="distancia_superior_input_configurar_cuenta">70dp</dimen>
+    <dimen name="distancia_superior_hints">50dp</dimen>
+    <dimen name="distancia_views_m_configurar_cuenta">25dp</dimen>
+    <dimen name="texto_visualizacion_cuenta_seleccionada">25dp</dimen>
+
+    <!-- para el cardview de perfil-->
+    <dimen name="image_card_size_perfil">100dp</dimen>
+    <dimen name="card_size_perfil">140dp</dimen>
+
+    <!-- para el activity detalle mascota foto-->
+    <dimen name="detalle_mascota_card_size_width">350dp</dimen>
+    <dimen name="detalle_mascota_card_size_height">380dp</dimen>
+    <dimen name="detalle_mascota_image_size">320dp</dimen>
+    <dimen name="detalle_mascota_texto">30dp</dimen>
+    <dimen name="detalle_mascota_hueso">50dp</dimen>
+
+    <!-- para el cardview grid mascota-->
+    <dimen name="grid_mascota_card_size_width">180dp</dimen>
+    <dimen name="grid_mascota_card_size_height">200dp</dimen>
+    <dimen name="grid_mascota_image">150dp</dimen>
+</resources>

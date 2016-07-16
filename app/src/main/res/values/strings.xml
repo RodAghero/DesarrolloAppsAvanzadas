@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name"></string>
+
+    <string name="titulo_action_bar">Encabezado</string>
+
+    <string name="pnombre">nombre mascota</string>
+    <string name="pnumero">num</string>
+
+    <!-- Para los menus-->
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_acerca_de">Acerca de</string>
+    <string name="menu_configurar_cuenta">Configurar Cuenta</string>
+    <string name="texto_acerca_de">Bio del Desarrollador</string>
+    <string name="boton_enviar_comentario">Enviar Comentario</string>
+    <string name="texto_hint_nombre">Nombre completo</string>
+    <string name="texto_hint_correo">Correo</string>
+    <string name="texto_hint_mensaje">Mensaje</string>
+    <!-- Para el menu nuevo, Configurar Cuenta-->
+    <string name="texto_escribir_usuario">Escribe tu usuario</string>
+    <string name="boton_guardar_cuenta">Guardar Cuenta</string>
+    <string name="texto_configurar_cuenta">Petagram</string>
+    <string name="texto_radio_buttons">opcionCuenta</string>
+    <string name="visualizacion_cuenta_seleccionada">Cuenta Seleccionada</string>
+
+    <string name="likes"> 0 </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
