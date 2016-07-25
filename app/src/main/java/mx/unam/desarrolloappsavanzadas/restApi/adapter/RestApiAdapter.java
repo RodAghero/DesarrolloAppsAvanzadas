@@ -31,4 +31,17 @@ public class RestApiAdapter {
         return gsonBuilder.create();
     }
 
+    // Para notificaciones / heroku / firebase
+
+    public Endpoints establecerConexionRestApiNHF(){
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ConstantesRestApi.ROOT_URL_NHF)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        return retrofit.create(Endpoints.class);
+
+    }
+
 }

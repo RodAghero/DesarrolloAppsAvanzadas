@@ -23,6 +23,7 @@
     <dimen name="distancia_superior_texto">100dp</dimen>
     <dimen name="distancia_left">50dp</dimen>
     <dimen name="distancia_superior_boton">120dp</dimen>
+    <dimen name="doble_distancia_superior_boton">240dp</dimen>
     <dimen name="texto_botones">20dp</dimen>
     <dimen name="texto_letrero_configurar_cuenta">40dp</dimen>
     <dimen name="distancia_superior_input_configurar_cuenta">70dp</dimen>

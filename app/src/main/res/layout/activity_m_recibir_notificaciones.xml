@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="mx.unam.desarrolloappsavanzadas.Menus.mRecibirNotificaciones">
+
+    <include android:id="@+id/action_bar"
+        layout="@layout/actionbar"
+        >
+    </include>
+
+    <Button
+        android:id="@+id/botonNotificacionLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_recibir_notificaciones_locales"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/distancia_superior_boton"
+        android:textSize="@dimen/texto_botones"
+        android:layout_marginLeft="40dp"
+        android:onClick="lanzarNotificacionLocal"
+        />
+
+    <Button
+        android:id="@+id/botonNotificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_recibir_notificaciones"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/doble_distancia_superior_boton"
+        android:textSize="@dimen/texto_botones"
+        android:layout_marginLeft="55dp"
+        android:onClick="lanzarNotificacionToken"
+        />
+
+    <Button
+        android:id="@+id/botonEnviarTokenUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar token, usuario"
+        android:textStyle="bold"
+        android:layout_marginTop="360dp"
+        android:textSize="@dimen/texto_botones"
+        android:layout_marginLeft="50dp"
+        android:onClick="enviarTokenUsuario"
+        />
+
+
+</RelativeLayout>

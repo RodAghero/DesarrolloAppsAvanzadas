@@ -16,4 +16,9 @@ public class ConstantesRestApi {
     // url completo
     public static final String URL_GET_RECENT_MEDIA_USER = KEY_GET_RECENT_MEDIA_USER + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 
+    // Para notificaciones / heroku / firebase
+
+    public static final String ROOT_URL_NHF = "https://safe-shelf-98430.herokuapp.com/";
+    public static final String KEY_POST_ID_TOKEN_USUARIO = "registrar-usuario/";
+
 }

@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import mx.unam.desarrolloappsavanzadas.Menus.mAcercaDe;
 import mx.unam.desarrolloappsavanzadas.Menus.mConfigurarCuenta;
 import mx.unam.desarrolloappsavanzadas.Menus.mContacto;
+import mx.unam.desarrolloappsavanzadas.Menus.mRecibirNotificaciones;
 import mx.unam.desarrolloappsavanzadas.adapters.PageAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.mConfigurarCuenta:
                 Intent intent2 = new Intent(this,mConfigurarCuenta.class);
                 startActivity(intent2);
+                break;
+            case R.id.mRecibirNotificaciones:
+                Intent intent3 = new Intent(this, mRecibirNotificaciones.class);
+                startActivity(intent3);
                 break;
         }
         return super.onOptionsItemSelected(item);
