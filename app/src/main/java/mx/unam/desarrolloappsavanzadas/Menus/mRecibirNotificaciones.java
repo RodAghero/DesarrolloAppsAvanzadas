@@ -31,6 +31,8 @@ public class mRecibirNotificaciones extends AppCompatActivity {
 
     private Toolbar toolbar;
 
+    // private static final String USUARIO = "Rod Aghero";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,10 +78,10 @@ public class mRecibirNotificaciones extends AppCompatActivity {
     public void enviarTokenUsuario(View v){
 
         String token = FirebaseInstanceId.getInstance().getToken();
-        String idUsuario = FirebaseInstanceId.getInstance().getId();
+        //String idUsuario = FirebaseInstanceId.getInstance().getId();
 
         Log.d("TOKEN_DISPOSITIVO", token);
-        Log.d("ID", idUsuario);
+        //Log.d("ID", idUsuario);
 
         final UsuarioResponse usuarioResponse = new UsuarioResponse("-KNT3xXZXoqSU8cRGpdu", token, "Rod Aghero");
 
@@ -87,22 +89,25 @@ public class mRecibirNotificaciones extends AppCompatActivity {
         Endpoints endpoints = restApiAdapter.establecerConexionRestApiNHF();
 
         Call<UsuarioResponse> usuarioResponseCall = endpoints.registrarTokenUsuarioID(usuarioResponse.getToken(), usuarioResponse.getIdUsuario());
+        //Call<UsuarioResponse> usuarioResponseCall = endpoints.registrarTokenUsuarioID(token, USUARIO);
 
         usuarioResponseCall.enqueue(new Callback<UsuarioResponse>() {
             @Override
             public void onResponse(Call<UsuarioResponse> call, Response<UsuarioResponse> response) {
-
+// PROBLEMA --> no me permite obtener los datos con el objeto usuarioResponse1, por lo que pasan directo desde usuarioResponse
+                // pero por lo mismo no actualiza el id autogenerado por Firebase
+                // RESUELTO: se deben tener los mismos nombres en la respuesta de index y en la clase UsuarioResponse
                 UsuarioResponse usuarioResponse1 = response.body();
 
-                Log.d("ID_AUTOGENERADO", usuarioResponse.getIdAutoGenerado());
-                Log.d("TOKEN_ID_DISPOSITIVO", usuarioResponse.getToken());
-                Log.d("ID_USUARIO", usuarioResponse.getIdUsuario());
+                Log.d("ID_AUTOGENERADO", usuarioResponse1.getId());
+                Log.d("TOKEN_ID_DISPOSITIVO", usuarioResponse1.getToken());
+                Log.d("ID_USUARIO", usuarioResponse1.getIdUsuario());
 
             }
 
             @Override
             public void onFailure(Call<UsuarioResponse> call, Throwable t) {
-
+                Log.d("ERROR", "Error al obtener datos");
             }
         });
 

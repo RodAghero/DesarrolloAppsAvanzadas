@@ -5,13 +5,13 @@ package mx.unam.desarrolloappsavanzadas.restApi.model;
  */
 public class UsuarioResponse {
 
-    private String idAutoGenerado;
+    private String id;
     private String token;           // id_dispositivo
     private String idUsuario;
 
     // Constructores
-    public UsuarioResponse(String idAutoGenerado, String token, String idUsuario) {
-        this.idAutoGenerado = idAutoGenerado;
+    public UsuarioResponse(String id, String token, String idUsuario) {
+        this.id = id;
         this.token = token;
         this.idUsuario = idUsuario;
     }
@@ -21,12 +21,12 @@ public class UsuarioResponse {
     }
 
     // Getters, Setters
-    public String getIdAutoGenerado() {
-        return idAutoGenerado;
+    public String getId() {
+        return id;
     }
 
-    public void setIdAutoGenerado(String idAutoGenerado) {
-        this.idAutoGenerado = idAutoGenerado;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getToken() {

@@ -24,7 +24,7 @@
     <!-- para el menu recibir notificaciones -->
     <string name="boton_recibir_notificaciones_locales">Recibir Notificación Local</string>
     <string name="menu_recibir_notificaciones">Recibir Notificaciones</string>
-    <string name="boton_recibir_notificaciones">Recibir Notificación</string>
+    <string name="boton_recibir_notificaciones">Recibir Notificación (token)</string>
 
     <string name="likes"> 0 </string>
 

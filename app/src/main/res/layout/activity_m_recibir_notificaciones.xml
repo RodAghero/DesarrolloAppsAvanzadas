@@ -31,7 +31,7 @@
         android:textStyle="bold"
         android:layout_marginTop="@dimen/doble_distancia_superior_boton"
         android:textSize="@dimen/texto_botones"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="40dp"
         android:onClick="lanzarNotificacionToken"
         />
 
@@ -43,7 +43,7 @@
         android:textStyle="bold"
         android:layout_marginTop="360dp"
         android:textSize="@dimen/texto_botones"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="40dp"
         android:onClick="enviarTokenUsuario"
         />
 
