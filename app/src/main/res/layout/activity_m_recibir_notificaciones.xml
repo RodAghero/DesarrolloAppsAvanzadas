@@ -39,12 +39,24 @@
         android:id="@+id/botonEnviarTokenUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enviar token, usuario"
+        android:text="Enviar token, usuario, foto"
         android:textStyle="bold"
         android:layout_marginTop="360dp"
         android:textSize="@dimen/texto_botones"
         android:layout_marginLeft="40dp"
         android:onClick="enviarTokenUsuario"
+        />
+
+    <Button
+        android:id="@+id/botonEnviarNotificacionHueso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar Hueso"
+        android:textStyle="bold"
+        android:layout_marginTop="480dp"
+        android:textSize="@dimen/texto_botones"
+        android:layout_marginLeft="40dp"
+        android:onClick="likeHueso"
         />
 
 

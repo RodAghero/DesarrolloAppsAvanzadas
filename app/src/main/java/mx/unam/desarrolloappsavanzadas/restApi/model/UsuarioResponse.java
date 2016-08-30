@@ -8,12 +8,20 @@ public class UsuarioResponse {
     private String id;
     private String token;           // id_dispositivo
     private String idUsuario;
+    private String idFoto;
 
     // Constructores
     public UsuarioResponse(String id, String token, String idUsuario) {
         this.id = id;
         this.token = token;
         this.idUsuario = idUsuario;
+    }
+
+    public UsuarioResponse(String id, String token, String idUsuario, String idFoto) {
+        this.id = id;
+        this.token = token;
+        this.idUsuario = idUsuario;
+        this.idFoto = idFoto;
     }
 
     public UsuarioResponse() {
@@ -45,4 +53,11 @@ public class UsuarioResponse {
         this.idUsuario = idUsuario;
     }
 
+    public String getIdFoto() {
+        return idFoto;
+    }
+
+    public void setIdFoto(String idFoto) {
+        this.idFoto = idFoto;
+    }
 }

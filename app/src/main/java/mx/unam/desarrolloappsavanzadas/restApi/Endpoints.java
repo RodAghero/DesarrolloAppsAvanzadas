@@ -22,6 +22,10 @@ public interface Endpoints {
     @FormUrlEncoded
     @POST(ConstantesRestApi.KEY_POST_ID_TOKEN_USUARIO)
 
-    Call<UsuarioResponse> registrarTokenUsuarioID(@Field("token") String token, @Field("idUsuario") String idUsuario);
+    Call<UsuarioResponse> registrarTokenUsuarioID(@Field("token") String token, @Field("idUsuario") String idUsuario, @Field("idFoto") String idFoto);
+
+
+    @GET(ConstantesRestApi.KEY_LIKE_HUESO)
+    Call<UsuarioResponse> likeHueso(@Path("id") String id, @Path("idUsuario") String idUsuario);
 
 }

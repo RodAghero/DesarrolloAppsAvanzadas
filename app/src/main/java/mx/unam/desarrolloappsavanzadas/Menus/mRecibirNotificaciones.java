@@ -83,12 +83,15 @@ public class mRecibirNotificaciones extends AppCompatActivity {
         Log.d("TOKEN_DISPOSITIVO", token);
         //Log.d("ID", idUsuario);
 
-        final UsuarioResponse usuarioResponse = new UsuarioResponse("-KNT3xXZXoqSU8cRGpdu", token, "Rod Aghero");
+        // En esta línea cambia el idAutogenerado, el idUsuario y el idFoto (propios del dispositivo que se este usando)
+
+        //final UsuarioResponse usuarioResponse = new UsuarioResponse("-KPxsb3r9LiyBfybhf2w", token, "Rod Aghero", "1290628472327085000_3502625180");
+        final UsuarioResponse usuarioResponse = new UsuarioResponse("-KPxuszIj9eXAwYcz10f", token, "gaby_petfly", "1286542696915236916_3470121575");
 
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         Endpoints endpoints = restApiAdapter.establecerConexionRestApiNHF();
 
-        Call<UsuarioResponse> usuarioResponseCall = endpoints.registrarTokenUsuarioID(usuarioResponse.getToken(), usuarioResponse.getIdUsuario());
+        Call<UsuarioResponse> usuarioResponseCall = endpoints.registrarTokenUsuarioID(usuarioResponse.getToken(), usuarioResponse.getIdUsuario(), usuarioResponse.getIdFoto());
         //Call<UsuarioResponse> usuarioResponseCall = endpoints.registrarTokenUsuarioID(token, USUARIO);
 
         usuarioResponseCall.enqueue(new Callback<UsuarioResponse>() {
@@ -102,6 +105,7 @@ public class mRecibirNotificaciones extends AppCompatActivity {
                 Log.d("ID_AUTOGENERADO", usuarioResponse1.getId());
                 Log.d("TOKEN_ID_DISPOSITIVO", usuarioResponse1.getToken());
                 Log.d("ID_USUARIO", usuarioResponse1.getIdUsuario());
+                Log.d("ID_FOTO", usuarioResponse1.getIdFoto());
 
             }
 
@@ -111,6 +115,35 @@ public class mRecibirNotificaciones extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void likeHueso(View v) {
+        Log.d("LIKE_HUESO", "true");
+
+        // La cuenta que configure aquí será la que de el hueso (like)
+         //UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KPxsb3r9LiyBfybhf2w", "-KPxsb3r9LiyBfybhf2w", "Rod Aghero", "1290628472327085000_3502625180");
+        UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KPxuszIj9eXAwYcz10f", "-KPxuszIj9eXAwYcz10f", "gaby_petfly", "1286542696915236916_3470121575");
+
+        RestApiAdapter restApiAdapter = new RestApiAdapter();
+        Endpoints endpoints1 = restApiAdapter.establecerConexionRestApiNHF();
+
+        Call<UsuarioResponse> usuarioResponseCall = endpoints1.likeHueso(usuarioResponse4.getId(), usuarioResponse4.getIdUsuario());
+
+        usuarioResponseCall.enqueue(new Callback<UsuarioResponse>() {
+            @Override
+            public void onResponse(Call<UsuarioResponse> call, Response<UsuarioResponse> response) {
+                UsuarioResponse usuarioResponse5 = response.body();
+                Log.d("ID_AUTOGENERADO", usuarioResponse5.getId());
+                Log.d("TOKEN_ID_DISPOSITIVO", usuarioResponse5.getToken());
+                Log.d("ID_USUARIO", usuarioResponse5.getIdUsuario());
+                //Log.d("ID_FOTO", usuarioResponse5.getIdFoto());
+            }
+
+            @Override
+            public void onFailure(Call<UsuarioResponse> call, Throwable t) {
+
+            }
+        });
     }
 
 

@@ -21,4 +21,7 @@ public class ConstantesRestApi {
     public static final String ROOT_URL_NHF = "https://safe-shelf-98430.herokuapp.com/";
     public static final String KEY_POST_ID_TOKEN_USUARIO = "registrar-usuario/";
 
+    // Para like-hueso  (usa idAutogenerado y idUsuario)
+    public static final String KEY_LIKE_HUESO = "like-hueso/{id}/{idUsuario}/";
+
 }
