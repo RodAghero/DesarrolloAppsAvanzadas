@@ -79,9 +79,10 @@ public class PerfilMascotaAdaptador extends RecyclerView.Adapter<PerfilMascotaAd
                 // Método para dar like/hueso
                 Log.d("LIKE_HUESO", "true");
 
-                // La cuenta que configure aquí será la que de el hueso (like)
-                //UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KPxsb3r9LiyBfybhf2w", "-KPxsb3r9LiyBfybhf2w", "Rod Aghero", "1290628472327085000_3502625180");
-                UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KPxuszIj9eXAwYcz10f", "-KPxuszIj9eXAwYcz10f", "gaby_petfly", "1286542696915236916_3470121575");
+                // La cuenta que configure aquí RECIBE EL HUESO ---------->
+
+                UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KRQ1DTNnlNvDNx5sDR6", "e9icf4Q4BuA:A", "Rod Aghero", "1290628472327085000_3502625180");
+                //UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KRQ2zeKG3xyEMCv03vK", "cUKAkDeV7aQ:AP", "gaby_petfly", "1286542696915236916_3470121575");
 
                 RestApiAdapter restApiAdapter = new RestApiAdapter();
                 Endpoints endpoints1 = restApiAdapter.establecerConexionRestApiNHF();

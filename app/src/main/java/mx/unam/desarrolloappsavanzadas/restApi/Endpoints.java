@@ -2,6 +2,7 @@ package mx.unam.desarrolloappsavanzadas.restApi;
 
 import mx.unam.desarrolloappsavanzadas.restApi.model.MascotaResponse;
 import mx.unam.desarrolloappsavanzadas.restApi.model.UsuarioResponse;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -27,5 +28,10 @@ public interface Endpoints {
 
     @GET(ConstantesRestApi.KEY_LIKE_HUESO)
     Call<UsuarioResponse> likeHueso(@Path("id") String id, @Path("idUsuario") String idUsuario);
+
+    // Para Follow
+    @FormUrlEncoded
+    @POST(ConstantesRestApi.URL_POST_FOLLOW)
+    Call<ResponseBody> followUser(@Path("user-id") String idUsuario, @Field("action")String action);
 
 }

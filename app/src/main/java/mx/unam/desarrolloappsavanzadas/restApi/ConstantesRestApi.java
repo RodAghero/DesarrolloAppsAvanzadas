@@ -1,5 +1,8 @@
 package mx.unam.desarrolloappsavanzadas.restApi;
 
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.POST;
+
 /**
  * Created by Roy on 14/07/2016.
  */
@@ -23,5 +26,10 @@ public class ConstantesRestApi {
 
     // Para like-hueso  (usa idAutogenerado y idUsuario)
     public static final String KEY_LIKE_HUESO = "like-hueso/{id}/{idUsuario}/";
+
+    // Para follow --> https://api.instagram.com/v1/users/{user-id}/relationship?access_token=ACCESS-TOKEN
+    public static final String KEY_POST_FOLLOW = "users/{user-id}/relationship";
+
+    public static final String URL_POST_FOLLOW = KEY_POST_FOLLOW + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 
 }

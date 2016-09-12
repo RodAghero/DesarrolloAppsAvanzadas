@@ -83,10 +83,10 @@ public class mRecibirNotificaciones extends AppCompatActivity {
         Log.d("TOKEN_DISPOSITIVO", token);
         //Log.d("ID", idUsuario);
 
-        // En esta línea cambia el idAutogenerado, el idUsuario y el idFoto (propios del dispositivo que se este usando)
+        // En estas líneas SELECCIONA EL USUARIO QUE DA HUESO ----------->
 
-        //final UsuarioResponse usuarioResponse = new UsuarioResponse("-KPxsb3r9LiyBfybhf2w", token, "Rod Aghero", "1290628472327085000_3502625180");
-        final UsuarioResponse usuarioResponse = new UsuarioResponse("-KPxuszIj9eXAwYcz10f", token, "gaby_petfly", "1286542696915236916_3470121575");
+        //final UsuarioResponse usuarioResponse = new UsuarioResponse("-KRQ1DTNnlNvDNx5sDR6", token, "Rod Aghero", "1290628472327085000_3502625180");
+        final UsuarioResponse usuarioResponse = new UsuarioResponse("-KRQ2zeKG3xyEMCv03vK", token, "gaby_petfly", "1286542696915236916_3470121575");
 
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         Endpoints endpoints = restApiAdapter.establecerConexionRestApiNHF();
@@ -120,9 +120,10 @@ public class mRecibirNotificaciones extends AppCompatActivity {
     public void likeHueso(View v) {
         Log.d("LIKE_HUESO", "true");
 
-        // La cuenta que configure aquí será la que de el hueso (like)
-         //UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KPxsb3r9LiyBfybhf2w", "-KPxsb3r9LiyBfybhf2w", "Rod Aghero", "1290628472327085000_3502625180");
-        UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KPxuszIj9eXAwYcz10f", "-KPxuszIj9eXAwYcz10f", "gaby_petfly", "1286542696915236916_3470121575");
+        // La cuenta que configure aquí RECIBE EL HUESO --------->
+
+        UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KRQ1DTNnlNvDNx5sDR6", "e9icf4Q4BuA:A", "Rod Aghero", "1290628472327085000_3502625180");
+        //UsuarioResponse usuarioResponse4 = new UsuarioResponse("-KRQ2zeKG3xyEMCv03vK", "cUKAkDeV7aQ:AP", "gaby_petfly", "1286542696915236916_3470121575");
 
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         Endpoints endpoints1 = restApiAdapter.establecerConexionRestApiNHF();

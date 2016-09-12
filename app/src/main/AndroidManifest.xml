@@ -38,6 +38,16 @@
             </intent-filter>
         </service>
 
+
+        <receiver android:name=".AccionesNotificacion">
+            <intent-filter>
+                <action android:name="VER_PERFIL"/>
+                <action android:name="FOLLOW"/>
+                <action android:name="VER_USUARIO"/>
+            </intent-filter>
+        </receiver>
+
+
     </application>
 
 
