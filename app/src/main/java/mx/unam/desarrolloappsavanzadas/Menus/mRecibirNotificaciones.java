@@ -81,7 +81,7 @@ public class mRecibirNotificaciones extends AppCompatActivity {
         //String idUsuario = FirebaseInstanceId.getInstance().getId();
 
         Log.d("TOKEN_DISPOSITIVO", token);
-        //Log.d("ID", idUsuario);
+
 
         // En estas líneas SELECCIONA EL USUARIO QUE DA HUESO ----------->
 
@@ -92,7 +92,7 @@ public class mRecibirNotificaciones extends AppCompatActivity {
         Endpoints endpoints = restApiAdapter.establecerConexionRestApiNHF();
 
         Call<UsuarioResponse> usuarioResponseCall = endpoints.registrarTokenUsuarioID(usuarioResponse.getToken(), usuarioResponse.getIdUsuario(), usuarioResponse.getIdFoto());
-        //Call<UsuarioResponse> usuarioResponseCall = endpoints.registrarTokenUsuarioID(token, USUARIO);
+
 
         usuarioResponseCall.enqueue(new Callback<UsuarioResponse>() {
             @Override

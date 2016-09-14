@@ -59,15 +59,15 @@ public class NotificationService extends FirebaseMessagingService {
 
 
         // Para las acciones de la notificación
-        Intent intent1 = new Intent(this, MainActivity.class);
+        Intent intent1 = new Intent( );
         intent1.setAction("VER_PERFIL");
-        PendingIntent pendingIntent1 = PendingIntent.getBroadcast(this, 1, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent1 = PendingIntent.getBroadcast(this, 0, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        Intent intent2 = new Intent(this, MainActivity.class);
+        Intent intent2 = new Intent( );
         intent2.setAction("FOLLOW");
         PendingIntent pendingIntent2 = PendingIntent.getBroadcast(this, 2, intent2, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        Intent intent3 = new Intent(this, MainActivity.class);
+        Intent intent3 = new Intent( );
         intent3.setAction("VER_USUARIO");
         PendingIntent pendingIntent3 = PendingIntent.getBroadcast(this, 3, intent3, PendingIntent.FLAG_UPDATE_CURRENT);
 

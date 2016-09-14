@@ -39,25 +39,27 @@ public class AccionesNotificacion extends BroadcastReceiver {
 
 
         if (ACTION_KEY_01.equals(accion)) {
-            Toast.makeText(context, "Ver perfil", Toast.LENGTH_LONG).show();
             verPerfil();
+            Toast.makeText(context, "Ver perfil", Toast.LENGTH_LONG).show();
+        }
 
-        } else if (ACTION_KEY_02.equals(accion)) {
-            Toast.makeText(context, "Follow", Toast.LENGTH_LONG).show();
+        else if (ACTION_KEY_02.equals(accion)) {
             followUser();
+            Toast.makeText(context, "Follow", Toast.LENGTH_LONG).show();
 
         } else if (ACTION_KEY_03.equals(accion)) {
-            Toast.makeText(context, "Elige tu usuario", Toast.LENGTH_LONG).show();
             verUsuario();
+            Toast.makeText(context, "Elige tu usuario", Toast.LENGTH_LONG).show();
         }
+
 
     }
 
     public void verPerfil() {
         Intent intentVerPerfil = new Intent(context, MainActivity.class);
-        //PendingIntent pendingIntentVerPerfil = PendingIntent.getActivity(context, 0, intentVerPerfil, PendingIntent.FLAG_ONE_SHOT);
-        //startActivity(intentVerPerfil);
-    // NOTA por alguna razón no funciona startActivity para usar el intent
+        intentVerPerfil.putExtra("perfil", 1);
+        intentVerPerfil.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        context.startActivity(intentVerPerfil);
     }
 
 
@@ -94,7 +96,9 @@ public class AccionesNotificacion extends BroadcastReceiver {
 
     public void verUsuario() {
         Intent intentVerUsuario = new Intent(context, mConfigurarCuenta.class);
-        //startActivity(intentVerUsuario);
+        intentVerUsuario.putExtra("usuario", 2);
+        intentVerUsuario.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        context.startActivity(intentVerUsuario);
     }
 
 
